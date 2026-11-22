@@ -1,0 +1,48 @@
+@EMPLOYEE_MANAGEMENTAPII_HostAddress = http://localhost:5064
+
+### 1. Get all employees
+GET {{EMPLOYEE_MANAGEMENTAPII_HostAddress}}/api/employees
+Accept: application/json
+
+### 2. Search employees (e.g. search 'Alice')
+GET {{EMPLOYEE_MANAGEMENTAPII_HostAddress}}/api/employees?search=Alice
+Accept: application/json
+
+### 3. Filter by department
+GET {{EMPLOYEE_MANAGEMENTAPII_HostAddress}}/api/employees?department=Engineering
+Accept: application/json
+
+### 4. Get employee by ID
+GET {{EMPLOYEE_MANAGEMENTAPII_HostAddress}}/api/employees/1
+Accept: application/json
+
+### 5. Create a new employee
+POST {{EMPLOYEE_MANAGEMENTAPII_HostAddress}}/api/employees
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "department": "Engineering",
+  "position": "Software Engineer",
+  "salary": 85000,
+  "hireDate": "2024-01-15"
+}
+
+### 6. Update an employee
+PUT {{EMPLOYEE_MANAGEMENTAPII_HostAddress}}/api/employees/1
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "alice.johnson@example.com",
+  "department": "Engineering",
+  "position": "Lead Software Engineer",
+  "salary": 105000,
+  "hireDate": "2022-03-15"
+}
+
+### 7. Delete an employee
+DELETE {{EMPLOYEE_MANAGEMENTAPII_HostAddress}}/api/employees/5

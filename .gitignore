@@ -1,0 +1,28 @@
+
+# .NET build files
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Python virtual environments (if any)
+venv/
+lunar/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment variables and secrets
+.env
+appsettings.Development.json
+
+# Node.js dependencies (if frontend exists)
+node_modules/
+.next/
+dist/
+
+# Logs
+*.log
